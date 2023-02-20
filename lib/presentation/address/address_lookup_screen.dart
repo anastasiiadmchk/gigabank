@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gigabank/models/address.dart';
-import 'package:gigabank/presentation/widgets/country_dropdown.dart';
+import 'package:gigabank/data/models/address.dart';
+import 'package:gigabank/presentation/address/widgets/country_dropdown.dart';
 
 class AddressLookupForm extends StatefulWidget {
   const AddressLookupForm({super.key});
@@ -96,8 +96,12 @@ class _AddressLookupFormState extends State<AddressLookupForm> {
                 },
                 onSaved: (value) => _address.zipCode = value!,
               ),
+              const SizedBox(
+                height: 16,
+              ),
               CupertinoButton(
                 onPressed: _submitForm,
+                color: Colors.deepPurple,
                 child: const Text('Next'),
               ),
             ],
